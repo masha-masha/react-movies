@@ -11,7 +11,7 @@ const Main = () => {
       setLoading(true)
       const query1 = value ? value : 'matrix';
       const query2 = type !== 'all' ? `&type=${type}` : '';
-      const url = `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${query1}${query2}`;
+      const url = `https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${query1}${query2}`;
       const response = await fetch(url);
       const jsonData = await response.json();
       console.log(jsonData);
