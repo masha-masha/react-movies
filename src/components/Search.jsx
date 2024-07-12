@@ -4,9 +4,16 @@ const Search = ({ searchMovies }) => {
   const [search, updateSearch] = useState('');
   const [type, setType] = useState('');
 
+  const handleKey = (event) => {
+    if (event.key === 'Enter') {
+      searchMovies(search, type)
+    }
+  };
+
   const handleChange = (e) => {
     updateSearch(e.target.value)
-  }
+  };
+
   const handleFilter = (e) => {
     setType(e.target.dataset.type)
   };
@@ -17,7 +24,8 @@ const Search = ({ searchMovies }) => {
         <div className="input-field">
           <input
             onChange={handleChange}
-            placeholder="search"
+            onKeyDown={handleKey}
+            placeholder="  search"
             type="search"
             className="validate"
             value={search}
@@ -44,8 +52,7 @@ const Search = ({ searchMovies }) => {
           checked={type === 'movie'}
           data-type="movie" 
           onChange={handleFilter}/>
-          <span>Movies only
-          </span>
+          <span>Movies only</span>
         </label>
         <label>
           <input 

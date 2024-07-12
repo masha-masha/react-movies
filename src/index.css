@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: bisque;
 }
 
 nav {
@@ -12,6 +13,7 @@ nav {
 }
 .content {
   min-height: calc(100vh - 70px - 64px);
+  
 
 }
 .movies {
@@ -21,9 +23,12 @@ nav {
 }
 .btn-search{
   position: absolute;
-  top: 0;
+  top: 0.2rem;
   right: 0.5rem;
 }
 label:not(:last-child){
   margin-right: 1rem;
+}
+input {
+  text-indent: 10px;
 }

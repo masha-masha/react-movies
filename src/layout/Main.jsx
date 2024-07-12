@@ -2,7 +2,9 @@ import Preloader from '../components/Preloader';
 import Search from '../components/Search';
 import Movies from './../components/Movies';
 import React, { useState, useEffect } from 'react';
+
 const API_KEY = process.env.REACT_APP_API_KEY;
+
 const Main = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false)
